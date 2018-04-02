@@ -1,3 +1,75 @@
-// Place all the styles related to the Pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@supports (grid-area: auto) {
+	@media screen and (min-width: 768px) {
+    .home-container {
+			overflow: hidden;
+
+      display: grid;
+      grid-template-columns: repeat(10, 10vw);
+      grid-template-rows: auto;
+
+			.project-container {
+			 	grid-column: 2/9;
+				grid-row: 1;
+
+				height: 90vh;
+				width: 90vw;
+
+				overflow: hidden;
+
+				background-color: rgba(143, 215, 72, 0.53);
+
+				position: absolute;
+			}
+
+			.profile-container {
+				grid-column: 4/10;
+				grid-row: 1;
+
+				height: 90vh;
+				width: 70vw;
+
+				overflow-y: scroll;
+
+				justify-self: end;
+background-color: blue;
+			}
+
+			.profile-click {
+				grid-column: 10;
+				grid-row: 1;
+				background-color: red;
+			}
+    }
+	}
+
+	.swap {
+		grid-column: 1;
+		grid-row: 1;
+		justify-self: right;
+
+		height: 3vh;
+		width: 4vw;
+		z-index: 2;
+	}
+
+.clickme {
+	grid-column: 2;
+	grid-row: 2;
+
+	height: 3vh;
+	width: 4vw;
+	z-index: 2;
+}
+
+
+.me {
+	width: 10vw;
+	grid-column: 1;
+	grid-row: 2;
+}
+
+}
+
+img {
+	width: 10vw;
+}
