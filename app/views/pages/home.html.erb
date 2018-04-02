@@ -1,6 +1,16 @@
 <div class='home-container'>
   <div class='project-container'>
-    <%= render @projects %>
+    <h1>David Sawatske</h1>
+
+    <ul>
+    <% @projects.each do |project| %>
+      <h2><%= link_to project.title, project_path(project), id: project.id, remote: true %></h2>
+    <% end %>
+    </ul>
+
+    <div class="selected-project">
+
+    </div>
   </div>
 
   <div class='profile-container'>

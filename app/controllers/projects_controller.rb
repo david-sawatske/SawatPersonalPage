@@ -33,6 +33,10 @@ class ProjectsController < ApplicationController
   end
 
   def show
+    respond_to do |format|
+      format.html { project_path }
+      format.js
+    end
   end
 
   def destroy
