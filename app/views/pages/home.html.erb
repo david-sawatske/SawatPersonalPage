@@ -1,1 +1,49 @@
-<h1>David Sawatske</h1>
+<div class='home-container'>
+  <div class='project-container'>
+    <%= render @projects %>
+  </div>
+
+  <div class='profile-container'>
+    <div class="profile-top">
+      <a target="_blank" href="https://drive.google.com/">Resume</a>
+      <%= image_tag("this.png", :alt => "me") %>
+      <p class="desc">
+        My name's David. I'm a software developer. Please have a look at my projects or get to know me below.
+      </p>
+    </div>
+
+    <h1>
+      About Me
+    </h1>
+    <p>My principal experience is in building React/Redux apps with a Ruby on Rails backend. Check the list below for list of some of the technologies I'm most familiar with below. Please feel free to contact me if you are looking to connect or if interested in discussing opportunities. Thanks!
+    </p>
+
+    <div class="skills-list">
+      <h1>Skills</h1>
+      <ul>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Redux</li>
+        <li>Ruby</li>
+        <li>Rails</li>
+        <li>jQuery</li>
+        <li>Sass</li>
+        <li>SQL</li>
+      </ul>
+    </div>
+
+    <ul class="contact">
+      Email:
+      <li>
+        <a href="mailto:david@sawawtske.com">david@sawawtske.com</a>
+      </li>
+      Social:
+      <li>
+        <a target="_blank" href="https://www.linkedin.com/">LinkedIn</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://github.com/sawatkskeda10">GitHub</a>
+      </li>
+    </ul>
+  </div>
+</div>
