@@ -1,6 +1,10 @@
 <div class='home-container'>
   <h2 class="name">David Sawatske</h2>
 
+  <div class='links'>
+    <a target="_blank" href="https://drive.google.com/">Resume</a>
+  </div>
+
   <div class='project-container'>
     <ul class="project-list">
     <% @projects.each do |project| %>
@@ -18,19 +22,17 @@
   </div>
 
   <div class='profile-container'>
-    <div class="profile-top">
-      <a target="_blank" href="https://drive.google.com/">Resume</a>
-      <%= image_tag("this.png", alt: "me") %>
-      <p class="desc">
-        My name's David. I'm a software developer. Please have a look at my projects or get to know me below.
+    <%= image_tag("me.png", alt: "me", class: "profile-picture") %>
+    <p class="description">
+      My name's David. I'm a software developer. Please have a look at my projects or get to know me below.
+    </p>
+
+    <div class='about-me'>
+      <h2> About Me </h2>
+      <p>My principal experience is in building React/Redux apps with a Ruby on Rails backend. Check the list below for list of some of the technologies I'm most familiar with below. Please feel free to contact me if you are looking to connect or if interested in discussing opportunities. Thanks!
       </p>
     </div>
 
-    <h2>
-      About Me
-    </h2>
-    <p>My principal experience is in building React/Redux apps with a Ruby on Rails backend. Check the list below for list of some of the technologies I'm most familiar with below. Please feel free to contact me if you are looking to connect or if interested in discussing opportunities. Thanks!
-    </p>
 
     <div class="skills-list">
       <h2>Skills</h2>
@@ -46,19 +48,36 @@
       </ul>
     </div>
 
-    <ul class="contact">
-      Email:
-      <li>
-        <a href="mailto:david@sawawtske.com">david@sawawtske.com</a>
-      </li>
-      Social:
-      <li>
-        <a target="_blank" href="https://www.linkedin.com/">LinkedIn</a>
-      </li>
-      <li>
-        <a target="_blank" href="https://github.com/sawatkskeda10">GitHub</a>
-      </li>
-    </ul>
+    <div class='contact'>
+      <h2>Contact</h2>
+      <ul>
+        <li>
+          <a href="mailto:david@sawawtske.com">
+            <%= image_tag("http://res.cloudinary.com/sawatskeda10/image/upload/v1522779593/email_hj9imp.png") %>
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://www.linkedin.com/">
+            <%= image_tag("http://res.cloudinary.com/sawatskeda10/image/upload/v1522779593/linkedin_v7kkx8.png") %>
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://github.com/sawatkskeda10">
+            <%= image_tag("http://res.cloudinary.com/sawatskeda10/image/upload/v1522780539/github_uvwdnt.png") %>
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://angel.co">
+            <%= image_tag("http://res.cloudinary.com/sawatskeda10/image/upload/v1522779593/angel_md8pqa.png") %>
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://drive.google.com/">
+            <%= image_tag("http://res.cloudinary.com/sawatskeda10/image/upload/v1522780818/resume_l3s55u.png") %>
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 
   <div class="profile-click">

@@ -4,72 +4,205 @@
 			overflow: hidden;
 
       display: grid;
-      grid-template-columns: repeat(10, 10vw);
-      grid-template-rows: auto;
+      grid-template-columns: 20vw 15vw 55vw 10vw;
+      grid-template-rows: 7.5vh 92.5vh;
 
-			.project-container {
-			 	grid-column: 2/9;
+			div {
+				max-height: 650px;
+			}
+
+			.name {
+				grid-column: 1;
 				grid-row: 1;
 
-				height: 90vh;
+				justify-self: center;
+				align-self: center;
+			}
+
+			.links {
+				grid-column: 3;
+				grid-row: 1;
+			}
+
+			.project-container {
+			 	grid-column: 2/4;
+				grid-row: 2;
+
 				width: 90vw;
-
-				overflow: hidden;
-
-				background-color: rgba(143, 215, 72, 0.53);
-
+				height: 85vh;
 				position: absolute;
+				overflow: hidden;
+				margin-top: 7.5vh;
+
+
+				display: grid;
+				grid-template-columns: 25vw 65vw;
+				grid-template-rows: 90vh;
+
+				ul {
+					grid-column: 1;
+					grid-row: 1;
+				}
+
+				.project-list {
+					padding-top: 10vh;
+				}
+
+				.project-display-container {
+					grid-column: 2;
+					grid-row: 1/4;
+
+					height: 80vh;
+
+					display: grid;
+					grid-template-columns: repeat(5, 15vw);
+					grid-template-rows: auto;
+
+					.computer-screen {
+						width: 60vw;
+						height: auto;
+
+						display:block;
+						margin: auto;
+					}
+
+					.project {
+						z-index: 4;
+					}
+
+					.delete-link {
+						display: none;
+					}
+
+					.edit-link {
+						display: none;
+					}
+				}
 			}
 
 			.profile-container {
-				grid-column: 4/10;
-				grid-row: 1;
+				grid-column: 3;
+				grid-row: 2;
 
-				height: 90vh;
-				width: 70vw;
+				width: 60vw;
+				height: 80vh;
 
 				overflow-y: scroll;
+				overflow-x: hidden;
 
-				justify-self: end;
-background-color: blue;
+
+				display: grid;
+				grid-template-columns: 35vw 5vw 20vw;
+				grid-template-rows: 2.5vh 55vh auto;
+
+				div {
+					grid-template-columns: 12.5vw 30vw;
+					grid-template-rows: auto;
+					grid-column-gap: 2vw;
+					grid-row-gap: 2vh;
+				}
+
+				h2 {
+					padding-top: 4vh;
+				}
+
+				.description {
+					grid-column: 1/3;
+					grid-row: 1/3;
+
+					align-self: center;
+					margin-left: 5vw;
+
+					font-size: calc(16px + 1.5vw);
+				}
+
+				.profile-picture {
+					grid-column: 2/4;
+					grid-row: 1/3;
+
+					width: 25vw;
+					max-width: 350px;
+
+					margin-top: -2.5vh;
+				}
+
+				.about-me {
+					grid-column: 1/4;
+					grid-row: 3;
+
+					justify-self: center;
+
+					display: grid;
+
+					h2 {
+						grid-column: 1;
+					}
+
+					p {
+						grid-column: 2;
+					}
+				}
+
+				.skills-list {
+					grid-column: 1/4;
+					grid-row: 4;
+
+					justify-self: center;
+
+					display: grid;
+
+					h2 {
+						grid-column: 1;
+					}
+
+					ul {
+						grid-column: 2;
+						column-count: 3;
+
+						li {
+							font-size: calc(16px + .5vw);
+							padding-top: 1vh;
+						}
+					}
+				}
+
+				.contact {
+					grid-column: 1/4;
+					grid-row: 6;
+					justify-self: center;
+
+					display: grid;
+
+					h2 {
+						grid-column: 1;
+						padding-top: 0;
+						align-self: center;
+					}
+
+					ul {
+					 column-count: 5;
+
+						img {
+					 		width: 4vw;
+
+							align-self: center;
+						}
+					}
+				}
 			}
 
 			.profile-click {
-				grid-column: 10;
-				grid-row: 1;
-				background-color: red;
+				grid-column: 4;
+				grid-row: 2/4;
+
+				width: 6vw;
+
+
+				h2 {
+					transform: rotate(90deg);
+					margin-top: 15vh;
+				}
 			}
     }
 	}
-
-	.swap {
-		grid-column: 1;
-		grid-row: 1;
-		justify-self: right;
-
-		height: 3vh;
-		width: 4vw;
-		z-index: 2;
-	}
-
-.clickme {
-	grid-column: 2;
-	grid-row: 2;
-
-	height: 3vh;
-	width: 4vw;
-	z-index: 2;
-}
-
-
-.me {
-	width: 10vw;
-	grid-column: 1;
-	grid-row: 2;
-}
-
-}
-
-img {
-	width: 10vw;
 }

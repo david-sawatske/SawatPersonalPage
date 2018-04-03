@@ -5,11 +5,12 @@
 $(document).ready ->
   $('.project-container').click ->
     $('.project-container').animate 'right': '8.5vw'
-    $('.profile-container').animate 'width': '50vw'
+    $('.profile-container').animate 'width': '30vw'
     $('.profile-click').fadeIn()
     return
   $('.profile-click').click ->
     $('.project-container').animate 'right': '60vw'
+    $('.profile-container').css 'width': '50vw'
     $('.profile-click').fadeOut()
     return
   return
