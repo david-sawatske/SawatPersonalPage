@@ -1,35 +1,39 @@
 <div class='home-container'>
-  <div class='project-container'>
-    <h1>David Sawatske</h1>
+  <h2 class="name">David Sawatske</h2>
 
-    <ul>
+  <div class='project-container'>
+    <ul class="project-list">
     <% @projects.each do |project| %>
-      <h2><%= link_to project.title, project_path(project), id: project.id, remote: true %></h2>
+      <h1>
+        <%= link_to project.title, project_path(project), id: project.id, remote: true %>
+      </h1>
     <% end %>
     </ul>
 
-    <div class="selected-project">
-
+    <div class='project-display-container'>
+      <%= image_tag("computer.png", class: "computer-screen") %>
+      <div class="selected-project">
+      </div>
     </div>
   </div>
 
   <div class='profile-container'>
     <div class="profile-top">
       <a target="_blank" href="https://drive.google.com/">Resume</a>
-      <%= image_tag("this.png", :alt => "me") %>
+      <%= image_tag("this.png", alt: "me") %>
       <p class="desc">
         My name's David. I'm a software developer. Please have a look at my projects or get to know me below.
       </p>
     </div>
 
-    <h1>
+    <h2>
       About Me
-    </h1>
+    </h2>
     <p>My principal experience is in building React/Redux apps with a Ruby on Rails backend. Check the list below for list of some of the technologies I'm most familiar with below. Please feel free to contact me if you are looking to connect or if interested in discussing opportunities. Thanks!
     </p>
 
     <div class="skills-list">
-      <h1>Skills</h1>
+      <h2>Skills</h2>
       <ul>
         <li>JavaScript</li>
         <li>React</li>
@@ -57,5 +61,7 @@
     </ul>
   </div>
 
-  <h2 class="profile-click"> About </h2>
+  <div class="profile-click">
+    <h2> About </h2>
+  </div>
 </div>
