@@ -9,8 +9,8 @@ $(document).ready ->
     $('.profile-click').fadeIn()
     return
   $('.profile-click').click ->
-    $('.project-container').animate 'right': '60vw'
-    $('.profile-container').css 'width': '50vw'
+    $('.project-container').animate 'right': '65vw'
+    $('.profile-container').css 'width': '60vw'
     $('.profile-click').fadeOut()
     return
   return
