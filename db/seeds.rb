@@ -20,7 +20,7 @@ for i in 0..2 do
 end
 
 for i in 0..3 do
-  Technology.create!(name: techs[i], icon: tech_icons[i])
+  Technology.create!(name: techs[i], icon: base_url + tech_icons[i])
 end
 
 Project.all.each do |proj|

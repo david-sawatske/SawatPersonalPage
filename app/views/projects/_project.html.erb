@@ -2,9 +2,15 @@
   <h3><%= link_to project.title, project_path(project) %></h3>
   <%= link_to "Edit", edit_project_path(project), class: "edit-link" %>
   <%= link_to "Delete", project, method: :delete, data: { confirm: 'Are you sure?' }, class: "delete-link" %>
-  <p class = "project-description"><%= project.description %></p>
+  <p class="project-description"><%= project.description %></p>
   <%= image_tag project.image, class: "project-image" %>
   <div class="project-technologies">
-    <h4>PROJECT TECHNOLOGIES</h4>
+    <h4>Technologies: </h4>
+    <ul>
+      <% project.technologies.each do |tech| %>
+        <li><%= image_tag tech.icon, class: "tech-icon" %></li>
+      <% end %>
+    </ul>
+
   </div>
 </div>
