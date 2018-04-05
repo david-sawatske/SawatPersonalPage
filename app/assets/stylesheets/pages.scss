@@ -24,6 +24,19 @@
 				grid-row: 1;
 
 				justify-self: right;
+				align-self: center;
+
+				.contact {
+					width: 20vw;
+
+					h2 {
+						display: none;
+					}
+
+					img {
+						width: 2vw;
+					}
+				}
 			}
 
 			.project-container {
@@ -249,14 +262,10 @@
 						align-self: center;
 					}
 
-					ul {
-					 column-count: 5;
+					img {
+				 		width: 3vw;
 
-						img {
-					 		width: 4vw;
-
-							align-self: center;
-						}
+						align-self: center;
 					}
 				}
 			}
@@ -275,6 +284,12 @@
 				h2 {
 					transform: rotate(90deg);
 					margin-top: 15vh;
+				}
+			}
+
+			.contact {
+				ul {
+				 column-count: 5;
 				}
 			}
     }

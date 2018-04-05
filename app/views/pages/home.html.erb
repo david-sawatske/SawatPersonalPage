@@ -2,7 +2,7 @@
   <h2 class="name">David Sawatske</h2>
 
   <div class='links'>
-    <h3>CONTACT PARTIAL</h3>
+    <%= render "contact" %>
   </div>
 
   <div class='project-container'>
@@ -48,36 +48,7 @@
       </ul>
     </div>
 
-    <div class='contact'>
-      <h2>Contact</h2>
-      <ul>
-        <li>
-          <a href="mailto:david@sawawtske.com">
-            <%= image_tag("http://res.cloudinary.com/sawatskeda10/image/upload/v1522779593/email_hj9imp.png") %>
-          </a>
-        </li>
-        <li>
-          <a target="_blank" href="https://www.linkedin.com/">
-            <%= image_tag("http://res.cloudinary.com/sawatskeda10/image/upload/v1522779593/linkedin_v7kkx8.png") %>
-          </a>
-        </li>
-        <li>
-          <a target="_blank" href="https://github.com/sawatkskeda10">
-            <%= image_tag("http://res.cloudinary.com/sawatskeda10/image/upload/v1522780539/github_uvwdnt.png") %>
-          </a>
-        </li>
-        <li>
-          <a target="_blank" href="https://angel.co">
-            <%= image_tag("http://res.cloudinary.com/sawatskeda10/image/upload/v1522779593/angel_md8pqa.png") %>
-          </a>
-        </li>
-        <li>
-          <a target="_blank" href="https://drive.google.com/">
-            <%= image_tag("http://res.cloudinary.com/sawatskeda10/image/upload/v1522780818/resume_l3s55u.png") %>
-          </a>
-        </li>
-      </ul>
-    </div>
+    <%= render "contact" %>
   </div>
 
   <div class="profile-click">
