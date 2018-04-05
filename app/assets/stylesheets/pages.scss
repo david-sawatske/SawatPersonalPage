@@ -39,6 +39,21 @@
 				}
 			}
 
+			.project-overlay {
+				grid-column: 2/4;
+				grid-row: 2;
+
+				height: 85vh;
+				width: 90vw;
+				margin-left: 2vw;
+
+				position: absolute;
+				overflow: hidden;
+				margin-top: 7.5vh;
+
+				background-color: $off-black-t;
+			}
+
 			.project-container {
 			 	grid-column: 2/4;
 				grid-row: 2;
