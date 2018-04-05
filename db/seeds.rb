@@ -16,7 +16,7 @@ techs = ['jQuery', 'Rails', 'Redux', 'React' ]
 tech_icons = ['v1522761437/jquery_kamagb.png', 'v1522761437/rails_sydwpm.png', 'v1522761604/redux_ef5nyt.png', 'v1522761437/react_wdsukh.png']
 
 for i in 0..2 do
-  Project.create!(title: projects[i], description: i, image: proj_image[i])
+  Project.create!(title: projects[i], description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc feugiat vitae arcu non pellentesque. Cras at condimentum enim. Morbi ut magna tincidunt purus varius aliquam.', image: proj_image[i])
 end
 
 for i in 0..3 do

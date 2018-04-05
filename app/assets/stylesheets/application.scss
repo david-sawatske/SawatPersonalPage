@@ -31,12 +31,12 @@ img {
 }
 
 a {
-  color: black;
+  color: $dark-grey;
   text-decoration: none;
 }
 
 a:hover {
-  color: $dark-grey;
+  color: $blue-grey;
 }
 
 h1, h2, h3, h4 {
@@ -47,6 +47,8 @@ h1, h2, h3, h4 {
 
 h1 {
   font-size: 3.25vw;
+
+  color: $off-black;
 }
 
 h2 {

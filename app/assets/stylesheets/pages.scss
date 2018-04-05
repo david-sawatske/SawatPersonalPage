@@ -1,15 +1,13 @@
+@import '_variables';
+
 @supports (grid-area: auto) {
 	@media screen and (min-width: 768px) {
     .home-container {
 			overflow: hidden;
 
       display: grid;
-      grid-template-columns: 20vw 15vw 55vw 10vw;
-      grid-template-rows: 7.5vh 92.5vh;
-
-			div {
-				max-height: 650px;
-			}
+      grid-template-columns: 20vw 15vw 55vw 5vw;
+      grid-template-rows: 7.5vh 85.5vh;
 
 			.name {
 				grid-column: 1;
@@ -17,37 +15,40 @@
 
 				justify-self: center;
 				align-self: center;
+
+				color: $off-black;
 			}
 
 			.links {
-				grid-column: 3;
+				grid-column: 3/5;
 				grid-row: 1;
 
 				justify-self: right;
-				background-color: red;
 			}
 
 			.project-container {
 			 	grid-column: 2/4;
 				grid-row: 2;
 
-				width: 90vw;
 				height: 85vh;
+				width: 90vw;
+				margin-left: 2vw;
+
 				position: absolute;
 				overflow: hidden;
 				margin-top: 7.5vh;
 
-				background-color: #f8f8ff;
+				background-color: $background-grey;
 
 				display: grid;
 				grid-template-columns: 25vw 65vw;
-				grid-template-rows: 90vh;
+				grid-template-rows: auto;
 
 				ul {
 					grid-column: 1;
 					grid-row: 1;
 
-					margin-left: 3vw;
+					margin-left: 2vw;
 
 					h1 {
 					 padding: 1.5vh 0;
@@ -61,19 +62,21 @@
 				.selected-project {
 					grid-column: 2;
 					grid-row: 1;
-					height: 80vh;
-					width: 65vw;
 
 					.project {
-						height: inherit;
-						width: inherit;
+						height: 80vh;
+						width: 63vw;
+
+						margin-top: 2.5vh;
+
+						background-color: $off-white;
 
 						display: grid;
-						grid-template-columns: repeat(5, 13vw);
-						grid-template-rows: 7.5vh 7.5vh 55vh 10vh;
+						grid-template-columns: 7.5vw 45vw 7.5vw;
+						grid-template-rows: 10vh 7.5vh 50vh 10vh;
 
 						h3 {
-							grid-column: 2/5;
+							grid-column: 2;
 							grid-row: 1;
 
 							justify-self: center;
@@ -81,16 +84,12 @@
 						}
 
 						.project-description {
-							grid-column: 1/6;
+							grid-column: 2;
 							grid-row: 2;
-
-							p {
-								justify-self: center;
-							}
 						}
 
 						.project-image {
-							grid-column: 1/6;
+							grid-column: 1/4;
 							grid-row: 3;
 
 							display: block;
@@ -101,7 +100,7 @@
 						}
 
 						.project-technologies {
-							grid-column: 2/5;
+							grid-column: 2;
 							grid-row: 4;
 
 							justify-self: center;
@@ -134,7 +133,6 @@
 						}
 					}
 
-
 					.delete-link {
 						display: none;
 					}
@@ -151,9 +149,10 @@
 
 				width: 60vw;
 				height: 80vh;
-
 				overflow-y: scroll;
 				overflow-x: hidden;
+
+				background-color: $blue;
 
 				display: grid;
 				grid-template-columns: 35vw 5vw 20vw;
@@ -265,12 +264,13 @@
 			.profile-click {
 				grid-column: 4;
 				grid-row: 2/4;
-
-				width: 6vw;
-				height: 80vh;
-
-				background-color: rgb(109, 136, 147);
 				z-index: 2;
+
+				width: 4vw;
+				height: 85vh;
+				justify-self: right;
+
+				background-color: $light-blue;
 
 				h2 {
 					transform: rotate(90deg);
