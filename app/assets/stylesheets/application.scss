@@ -23,9 +23,6 @@ html, .container {
   overflow: hidden;
 }
 
-body {
-}
-
 img {
  width: 10vw;
 }
@@ -66,4 +63,33 @@ p {
 ul {
  list-style: none;
  padding: 0;
+}
+
+@supports (grid-area: auto) {
+	@media screen and (min-width: 768px) {
+    body {
+      display: grid;
+      grid-template-columns: 100vw;
+      grid-template-rows: 100vh;
+
+      .session {
+        grid-column: 1;
+        grid-row: 1;
+        z-index: 1;
+
+        justify-self: right;
+        align-self: end;
+        padding: 4vh 5vw;
+
+        a {
+          color: $off-black-t;
+          font-size: 1.5vw;
+        }
+
+        a:hover {
+          color: $mid-blue;
+        }
+      }
+    }
+  }
 }

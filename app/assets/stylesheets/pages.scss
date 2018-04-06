@@ -3,6 +3,9 @@
 @supports (grid-area: auto) {
 	@media screen and (min-width: 768px) {
     .home-container {
+			grid-column: 1;
+			grid-row: 1;
+			
 			overflow: hidden;
 
       display: grid;
@@ -125,8 +128,8 @@
 							display: block;
 							margin: auto;
 
-							width: 55vw;
-							max-width: 80vh;
+							height: 42.5vh;
+							width: auto;
 						}
 
 						.project-technologies {
@@ -148,7 +151,7 @@
 								align-self: center;
 								padding-right: 2vw;
 
-								font-size: 1.75vw;
+								font-size: 2.75vh;
 							}
 
 							ul {
@@ -159,7 +162,7 @@
 									display: inline-block;
 
 									.tech-icon {
-										width: 4vw;
+										width: 6vh;
 
 										margin: 0 1vw;
 									}
@@ -236,7 +239,7 @@
 				.about-me {
 					grid-column: 1/4;
 					grid-row: 3;
-
+background-color: $off-white-t;
 					justify-self: center;
 
 					display: grid;
