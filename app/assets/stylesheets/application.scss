@@ -90,6 +90,13 @@ ul {
           color: $mid-blue;
         }
       }
+
+      .login {
+        grid-column: 1;
+        grid-row: 1;
+
+        justify-self: center;
+      }
     }
   }
 }
