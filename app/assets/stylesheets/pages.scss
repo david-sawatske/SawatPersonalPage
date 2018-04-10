@@ -5,7 +5,7 @@
     .home-container {
 			grid-column: 1;
 			grid-row: 1;
-			
+
 			overflow: hidden;
 
       display: grid;
@@ -190,7 +190,7 @@
 				overflow-y: scroll;
 				overflow-x: hidden;
 
-				background-color: $off-white;
+				background-color: $pic-background;
 				border-top: 1px solid $off-black-t;
 				border-bottom: 1px solid $off-black-t;
 
@@ -239,7 +239,8 @@
 				.about-me {
 					grid-column: 1/4;
 					grid-row: 3;
-background-color: $off-white-t;
+					background-color: $off-white-t;
+					
 					justify-self: center;
 
 					display: grid;
