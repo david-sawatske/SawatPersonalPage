@@ -42,14 +42,9 @@
     <div class="skills-list">
       <h2>Skills</h2>
       <ul>
-        <li>JavaScript</li>
-        <li>React</li>
-        <li>Redux</li>
-        <li>Ruby</li>
-        <li>Rails</li>
-        <li>jQuery</li>
-        <li>Sass</li>
-        <li>SQL</li>
+        <% @technologies.each do |tech| %>
+          <li><%= tech.name %></li>
+        <% end %>
       </ul>
     </div>
 
