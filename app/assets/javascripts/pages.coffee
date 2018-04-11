@@ -7,20 +7,15 @@ $(document).ready ->
     $('.project-container').animate 'right': '8.5vw'
     $('.project-overlay').animate 'right': '8.5vw'
     $('.project-overlay').css 'z-index': '0'
-    $('.profile-container').animate 'width': '30vw'
+    $('.profile-container').fadeOut()
     $('.profile-click').fadeIn()
     return
+    
   $('.profile-click').click ->
     $('.project-container').animate 'right': '65vw'
     $('.project-overlay').animate 'right': '65vw'
     $('.project-overlay').css 'z-index': '1'
-    $('.profile-container').css 'width': '60vw'
+    $('.profile-container').fadeIn()
     $('.profile-click').fadeOut()
-    return
-  return
-
-$(document).ready ->
-  $('.project-title').click ->
-      $('.project').toggle()
     return
   return
