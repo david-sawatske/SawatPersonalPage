@@ -107,30 +107,38 @@
 
 						display: grid;
 						grid-template-columns: 10vw 45vw 10vw;
-						grid-template-rows: 10vh 7.5vh 50vh 10vh;
+						grid-template-rows: 10vh 42vh 12.5vh 10vh;
 
 						h3 {
 							grid-column: 2;
 							grid-row: 1;
 
 							justify-self: center;
-							font-size: 4vw;
-						}
+							align-self: center;
+							margin-top: 2vh;
+							padding: 0 2vw;
 
-						.project-description {
-							grid-column: 2;
-							grid-row: 2;
+							color: $dark-grey;
+							font-size: 4vw;
+
+							border-top: 3px solid $mid-blue-t;
+							border-bottom: 3px solid $mid-blue-t;
 						}
 
 						.project-image {
 							grid-column: 1/4;
-							grid-row: 3;
+							grid-row: 2;
 
 							display: block;
 							margin: auto;
 
 							height: 42.5vh;
 							width: auto;
+						}
+
+						.project-description {
+							grid-column: 2;
+							grid-row: 3;
 						}
 
 						.project-technologies {
