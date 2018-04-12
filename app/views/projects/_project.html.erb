@@ -1,5 +1,9 @@
 <div class='project'>
-  <h3><%= link_to project.title, project_path(project) %></h3>
+  <% if logged_in?(:site_admin) %>
+    <h3><%= link_to project.title, project_path(project) %></h3>
+  <% else %>
+  <h3><%= project.title %></h3>
+  <% end %>
   <%= link_to "Edit", edit_project_path(project), class: "edit-link" %>
   <%= link_to "Delete", project, method: :delete, data: { confirm: 'Are you sure?' }, class: "delete-link" %>
   <p class="project-description"><%= project.description %></p>

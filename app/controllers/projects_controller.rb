@@ -1,6 +1,10 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:edit, :update, :show, :destroy]
 
+  access all: [],
+         user: [],
+         site_admin: :all
+
   def index
     @projects = Project.all
   end
