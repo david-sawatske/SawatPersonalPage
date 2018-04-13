@@ -39,13 +39,15 @@ a:hover {
 h1, h2, h3, h4 {
   font-family: 'Playfair Display', serif;
   font-weight: lighter;
+
+  color: $off-black;
   margin: 0;
 }
 
 h1 {
   font-size: 3.25vw;
 
-  color: $off-black;
+  color: $dark-green;
 }
 
 h2 {
@@ -58,6 +60,8 @@ h3 {
 
 p {
   font-size: calc(12px + .5vw);
+
+  color: $dark-grey;
 }
 
 ul {
@@ -65,12 +69,18 @@ ul {
  padding: 0;
 }
 
+li, p {
+  font-family: 'Raleway', serif;
+  margin: 0;
+  font-weight: lighter;
+}
+
 @supports (grid-area: auto) {
 	@media screen and (min-width: 768px) {
     body {
       display: grid;
       grid-template-columns: 100vw;
-      grid-template-rows: 95vh 5vh;
+      grid-template-rows: 94vh 6vh;
 
       .home-container {
         grid-column: 1;
@@ -88,12 +98,11 @@ ul {
         z-index: 2;
 
         justify-self: right;
-        align-self: end;
-        padding: 4vh 5vw;
+        margin-right: 15vw;
 
         a {
           color: $off-black-t;
-          font-size: 1.5vw;
+          font-size: 1.75vw;
         }
 
         a:hover {

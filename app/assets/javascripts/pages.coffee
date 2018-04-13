@@ -12,8 +12,8 @@ $(document).ready ->
     return
 
   $('.about-click').click ->
-    $('.project-container').animate 'right': '62.5vw'
-    $('.project-overlay').animate 'right': '62.5vw'
+    $('.project-container').animate 'right': '70vw'
+    $('.project-overlay').animate 'right': '70vw'
     $('.project-overlay').css 'z-index': '1'
     $('.profile-container').fadeIn()
     $('.about-click').fadeOut()

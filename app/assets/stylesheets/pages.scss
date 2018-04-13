@@ -23,7 +23,7 @@
 			}
 
 			.links {
-				grid-column: 4;
+				grid-column: 4/6;
 				grid-row: 1;
 
 				justify-self: right;
@@ -88,7 +88,7 @@
 					h1 {
 					 padding: 1.5vh 0;
 
-					 font-size: 3vw;
+					 font-size: 2.75vw;
 					}
 				}
 
@@ -102,19 +102,18 @@
 
 					.project {
 						height: 80vh;
-						width: 57.5vw;
+						width: 55vw;
 
 						margin-top: 2.5vh;
 
 						background-color: $off-white;
-						background-color: rgba(178, 219, 127, 0.45);
 
 						display: grid;
-						grid-template-columns: auto;
+						grid-template-columns: 37.5vw 17.5vw;
 						grid-template-rows: 12.5vh auto;
 
 						h3 {
-							grid-column: 1;
+							grid-column: 1/3;
 							grid-row: 1;
 
 							justify-self: center;
@@ -130,7 +129,7 @@
 						}
 
 						.project-image {
-							grid-column: 1/4;
+							grid-column: 1/3;
 							grid-row: 2;
 
 							display: block;
@@ -141,18 +140,41 @@
 						}
 
 						.project-description {
-							grid-column: 2;
+							grid-column: 1/3;
 							grid-row: 3;
+
+							width: 45vw;
+							padding-left: 5vw;
+						}
+
+						.project-links {
+							grid-column: 2;
+							grid-row: 2;
+
+							justify-self: center;
+							align-self: center;
+
+							img {
+								width: 3vw;
+							}
+
+							img:last-of-type {
+								padding-top: 2vh;
+							}
+
+							img:hover {
+								width: 4vw;
+							}
 						}
 
 						.project-technologies {
-							grid-column: 1/4;
+							grid-column: auto;
 							grid-row: 4;
 
-							width: 57.5vw;
-							background-color: $faint-blue;
-							border-top: 1px solid $mid-blue;
-							border-bottom: 1px solid $mid-blue;
+							width: 55vw;
+							background-color: $mid-blue-xt;
+							border-top: 1px solid $mid-blue-t;
+							border-bottom: 1px solid $mid-blue-t;
 
 							display: grid;
 							grid-template-columns: auto;
@@ -164,14 +186,15 @@
 								align-self: center;
 								padding-right: 2vw;
 
-								font-size: 2.75vh;
+								font-size: 3vh;
 							}
 
 							ul {
 								grid-column: 2;
 
-								li {
+								align-self: center;
 
+								li {
 									display: inline-block;
 
 									.tech-icon {
@@ -195,11 +218,12 @@
 			}
 
 			.profile-container {
-				grid-column: 3;
+				grid-column: 3/6;
 				grid-row: 2;
 
-				width: 60vw;
 				height: 85vh;
+				width: 57.5vw;
+
 				overflow-y: scroll;
 				overflow-x: hidden;
 
@@ -208,50 +232,51 @@
 				border-bottom: 1px solid $off-black-t;
 
 				display: grid;
-				grid-template-columns: 30vw 5vw 25vw;
-				grid-template-rows: auto;
+				grid-template-columns: 32.5vw 5vw 17.5vw;
+				grid-template-rows: 5vh 7.5vh 37.5vh auto;
+				grid-row-gap: 4vh;
 
 				div {
-					grid-template-columns: 8vw 13vw 30vw 8vw;
+					grid-template-columns: 5vw 15vw 30vw 5vw;
 					grid-template-rows: auto;
-					grid-column-gap: 2vw;
-					grid-row-gap: 2vh;
+
+					h1 {
+						color: $dark-grey;
+					}
+
+					h2 {
+						color: $dark-green;
+					}
 				}
 
 				div:nth-of-type(even) {
-					background-color: $faint-blue;
-					border-top: 1px solid $mid-blue;
-					border-bottom: 1px solid $mid-blue;
+					background-color: $mid-blue-xt;
+					border-top: 1px solid $mid-blue-t;
+					border-bottom: 1px solid $mid-blue-t;
 				}
 
 				.hello {
-					grid-column: 1/3;
-					grid-row: 1;
+					grid-row: 2;
 
 					justify-self: center;
-					margin-top: 13vh;
+					padding: 0 1.5vw;
 
-					border-bottom: 2px solid $mid-blue;
-				}
-
-				h2 {
-					padding-top: 4vh;
+					color: $dark-grey;
+					border-bottom: 3px solid $mid-blue-t;
 				}
 
 				.description {
 					grid-column: 1/3;
-					grid-row: 1/3;
+					grid-row: 3;
 
-					height: 30vh;
-					align-self: center;
-					margin-left: 5vw;
-
-					h1 {
-						text-align: center;
-					}
+					margin-left: 3vh;
 
 					p {
-						font-size: calc(16px + 1vw);
+						margin: auto;
+
+						font-size: calc(16px + .75vw);
+						font-style: italic;
+						color: $blueish;
 					}
 				}
 
@@ -259,16 +284,16 @@
 					grid-column: 2/4;
 					grid-row: 1/3;
 
-					width: 27.5vw;
+					width: 22.5vw;
 					max-width: 350px;
-					margin: 5vh 0;
 				}
 
 				.about-me {
-					grid-column: 1/5;
-					grid-row: 3;
+					grid-column: 1/4;
+					grid-row: 4;
 
 					justify-self: center;
+					padding: 2vh 0;
 
 					display: grid;
 
@@ -282,15 +307,16 @@
 				}
 
 				.skills-list {
-					grid-column: 1/5;
-					grid-row: 4;
-
-					justify-self: center;
+					grid-column: 1/4;
+					grid-row: 5;
 
 					display: grid;
 
+					margin: -2vh 0;
+
 					h2 {
 						grid-column: 2;
+						margin-top: 2vh;
 					}
 
 					ul {
@@ -299,13 +325,13 @@
 
 						li {
 							font-size: calc(16px + .5vw);
-							padding-top: 1vh;
+							color: $dark-grey;
 						}
 					}
 				}
 
 				.contact {
-					grid-column: 1/5;
+					grid-column: 1/4;
 					grid-row: 6;
 					justify-self: center;
 

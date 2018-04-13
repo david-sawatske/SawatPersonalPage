@@ -11,19 +11,19 @@
 
   <div class='project-container'>
     <ul class="project-list">
-    <!-- <% @projects.each do |project| %>
+    <% @projects.each do |project| %>
       <h1>
         <%= link_to project.title, project_path(project), id: project.id, remote: true %>
       </h1>
     <% end %>
-    </ul> -->
+    </ul>
 
     <div class="selected-project">
       <%= render @projects[0] if @projects[0] %>
     </div>
   </div>
 
-  <!-- <div class='profile-container'>
+  <div class='profile-container'>
     <%= image_tag("me.jpg", alt: "me", class: "profile-picture") %>
 
     <h1 class="hello"> Hi, I'm David.</h1>
@@ -36,7 +36,10 @@
 
     <div class='about-me'>
       <h2> About Me </h2>
-      <p>My principal experience is in building React/Redux apps with a Ruby on Rails backend. Check the list below for list of some of the technologies I'm most familiar with below. Please feel free to contact me if you are looking to connect or if interested in discussing opportunities. Thanks!
+      <p>My principal experience is in building React/Redux apps with a Ruby on Rails backend. Check the list below for list of some of the technologies I'm most familiar with below.
+        <br>
+        <br>
+      Please feel free to contact me if you are looking to connect or if interested in discussing opportunities. Thanks!
       </p>
     </div>
 
@@ -50,7 +53,7 @@
     </div>
 
     <%= render "contact" %>
-  </div> -->
+  </div>
 
   <div class="about-click">
     <h2> About </h2>
