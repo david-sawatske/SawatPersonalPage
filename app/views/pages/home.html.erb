@@ -11,19 +11,19 @@
 
   <div class='project-container'>
     <ul class="project-list">
-    <% @projects.each do |project| %>
+    <!-- <% @projects.each do |project| %>
       <h1>
         <%= link_to project.title, project_path(project), id: project.id, remote: true %>
       </h1>
     <% end %>
-    </ul>
+    </ul> -->
 
     <div class="selected-project">
       <%= render @projects[0] if @projects[0] %>
     </div>
   </div>
 
-  <div class='profile-container'>
+  <!-- <div class='profile-container'>
     <%= image_tag("me.jpg", alt: "me", class: "profile-picture") %>
 
     <h1 class="hello"> Hi, I'm David.</h1>
@@ -50,9 +50,9 @@
     </div>
 
     <%= render "contact" %>
-  </div>
+  </div> -->
 
-  <div class="profile-click">
+  <div class="about-click">
     <h2> About </h2>
   </div>
 </div>

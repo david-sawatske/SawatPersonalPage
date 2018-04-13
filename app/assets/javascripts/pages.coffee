@@ -4,18 +4,18 @@
 
 $(document).ready ->
   $('.project-overlay').click ->
-    $('.project-container').animate 'right': '8.5vw'
-    $('.project-overlay').animate 'right': '8.5vw'
+    $('.project-container').animate 'right': '17vw'
+    $('.project-overlay').animate 'right': '17vw'
     $('.project-overlay').css 'z-index': '0'
     $('.profile-container').fadeOut()
-    $('.profile-click').fadeIn()
+    $('.about-click').fadeIn()
     return
-    
-  $('.profile-click').click ->
-    $('.project-container').animate 'right': '65vw'
-    $('.project-overlay').animate 'right': '65vw'
+
+  $('.about-click').click ->
+    $('.project-container').animate 'right': '62.5vw'
+    $('.project-overlay').animate 'right': '62.5vw'
     $('.project-overlay').css 'z-index': '1'
     $('.profile-container').fadeIn()
-    $('.profile-click').fadeOut()
+    $('.about-click').fadeOut()
     return
   return
