@@ -10,8 +10,12 @@
   <%= image_tag project.image, class: "project-image" %>
 
   <ul class="project-links">
-    <li> <%= image_tag("web-link.png", alt: "web-link") %></li>
-    <li> <%= image_tag("git.png", alt: "repository") %></li>
+    <% if project.live_url %>
+      <li> <%= link_to_if project.live_url, image_tag("web-link.png"), project.live_url %> </li>
+    <% end %>
+    <% if project.git_url %>
+      <li> <%= link_to image_tag("github.png"), project.git_url %> </li>
+    <% end %>
   </ul>
 
   <div class="project-technologies">
