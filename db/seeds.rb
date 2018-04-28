@@ -51,7 +51,9 @@ end
 end
 
 Project.first.update!(description: "A web app for competing against your friends in fantasy stock leagues. Up-to-the-minute stock quotes and in depth data make you feel likeyou're trading in the real market!",
-                      git_url: "https://github.com/david-sawatske/BlueChip")
+                      git_url: "https://github.com/david-sawatske/BlueChip",
+                      live_url: "www.blue-chip.sawatske.com")
 
 Project.find(2).update!(description: "This web app provides a quick way to create a YouTube playlist.",
-                        git_url: "https://github.com/david-sawatske/ReduxTube")
+                        git_url: "https://github.com/david-sawatske/ReduxTube",
+                        live_url: "www.redux-tube.sawatske.com")
