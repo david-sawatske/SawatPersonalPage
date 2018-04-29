@@ -2,7 +2,7 @@
 
 @supports (grid-area: auto) {
 	@media screen and (min-width: 768px) {
-    .blog-index, .blog-form, .blog-show {
+    .blog-index, .blog-form, .blog-show, .blog-edit {
 			grid-column: 1;
 			grid-row: 1;
     }
