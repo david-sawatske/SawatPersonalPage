@@ -9,7 +9,7 @@
 base_url = 'http://res.cloudinary.com/sawatskeda10/image/upload/'
 
 projects = ['BlueChip', 'ReduxTube']
-proj_image = ['v1522785928/bc_uq29ib.gif', 'v1522861793/tube_d8gncz.png']
+proj_image = ['v1525177089/bc_dkfloc.gif', 'v1525052410/rt_v4zxte.gif']
 
 # tech = { 'JavaScript': 'v1522761437/javascript_b28lzh.png',
 #          'React': 'v1522761437/react_wdsukh.png',
