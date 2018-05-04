@@ -1,11 +1,7 @@
 class Project < ApplicationRecord
   has_and_belongs_to_many :technologies
   has_many :blogs
-  validates :title, :description, :image, presence: true
+  validates :title, :description, presence: true
 
-  after_initialize :set_defaults
-
-  def set_defaults
-    self.image ||= "http://placehold.it/600x400"
-  end
+  mount_uploader :image, ProjectUploader
 end
