@@ -7,7 +7,6 @@ class User < ApplicationRecord
   petergate(roles: [:site_admin], multiple: false)                                          ##
   ############################################################################################
 
-
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
