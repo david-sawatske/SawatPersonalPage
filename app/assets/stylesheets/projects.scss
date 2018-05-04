@@ -1,3 +1,26 @@
-// Place all the styles related to the Projects controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import '_variables';
+
+@supports (grid-area: auto) {
+	@media screen and (min-width: 768px) {
+    .project-index {
+      grid-column: 1;
+      grid-row: 1;
+
+      overflow-y: scroll;
+    }
+
+    .project-edit {
+      grid-column: 1;
+      grid-row: 1;
+
+      overflow-y: scroll;
+    }
+
+    .project-create {
+      grid-column: 1;
+      grid-row: 1;
+
+      overflow-y: scroll;
+    }
+  }
+}
