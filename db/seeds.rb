@@ -34,7 +34,7 @@ proj_image = ['v1525177089/bc_dkfloc.gif', 'v1525052410/rt_v4zxte.gif']
                'v1522761437/rspec_akzu2f.png']
 
 for i in 0..1 do
-  Project.create!(title: projects[i], description: 'temp', image: base_url + proj_image[i])
+  Project.create!(title: projects[i], description: 'temp')
 end
 
 for i in 0..10 do
@@ -56,3 +56,4 @@ Project.first.update!(description: "A web app for competing against your friends
 Project.find(2).update!(description: "This web app provides a quick way to create a YouTube playlist.",
                         git_url: "https://github.com/david-sawatske/ReduxTube",
                         live_url: "http://www.redux-tube.sawatske.com")
+User.create!(email: 'tester@ex.com', password: 'password', name: 'One Tester', roles: 'site_admin')
