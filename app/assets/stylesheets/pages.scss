@@ -102,14 +102,15 @@
 
 					.project {
 						height: 80vh;
-						width: 55vw;
+						width: 52.5vw;
 
 						margin-top: 2.5vh;
 
 						background-color: $off-white;
+						border-radius: 1vw 0 0 2vw;
 
 						display: grid;
-						grid-template-columns: 37.5vw 17.5vw;
+						grid-template-columns: 37.5vw 15vw;
 						grid-template-rows: 12.5vh auto;
 
 						h3 {
@@ -122,7 +123,7 @@
 							padding: 0 2vw;
 
 							color: $dark-grey;
-							font-size: 4vw;
+							font-size: 3.5vw;
 
 							border-top: 3px solid $mid-blue-t;
 							border-bottom: 3px solid $mid-blue-t;
@@ -144,7 +145,7 @@
 							grid-row: 3;
 
 							width: 45vw;
-							padding-left: 5vw;
+							margin: auto;
 						}
 
 						.project-links {
@@ -155,15 +156,16 @@
 							align-self: center;
 
 							img {
-								width: 3vw;
+								width: 3.5vw;
 							}
 
 							img:last-of-type {
-								padding-top: 2vh;
+								margin-top: 2vh;
 							}
 
 							img:hover {
-								width: 4vw;
+								box-shadow: 3px 3px 3px $off-black;
+								border-radius: 3vw;
 							}
 						}
 
@@ -172,6 +174,7 @@
 							grid-row: 4;
 
 							width: 55vw;
+							height: 10vh;
 							background-color: $mid-blue-xt;
 							border-top: 1px solid $mid-blue-t;
 							border-bottom: 1px solid $mid-blue-t;
@@ -184,6 +187,7 @@
 
 								justify-self: right;
 								align-self: center;
+								margin-bottom: 2vh;
 								padding-right: 2vw;
 
 								font-size: 3vh;
@@ -259,9 +263,13 @@
 					grid-row: 2;
 
 					justify-self: center;
-					padding: 0 1.5vw;
+					align-self: center;
+					margin-top: 2vh;
+					padding: 0 2vw;
 
 					color: $dark-grey;
+					font-size: 2.5vw;
+
 					border-bottom: 3px solid $mid-blue-t;
 				}
 
@@ -274,7 +282,7 @@
 					p {
 						margin: auto;
 
-						font-size: calc(16px + .75vw);
+						font-size: calc(12px + .75vw);
 						font-style: italic;
 						color: $blueish;
 					}
@@ -285,7 +293,6 @@
 					grid-row: 1/3;
 
 					width: 22.5vw;
-					max-width: 350px;
 				}
 
 				.about-me {
@@ -303,6 +310,7 @@
 
 					p {
 						grid-column: 3;
+						font-size: calc(8px + .75vw);
 					}
 				}
 
@@ -324,8 +332,9 @@
 						column-count: 3;
 
 						li {
-							font-size: calc(16px + .5vw);
+							font-size: calc(8px + .75vw);
 							color: $dark-grey;
+							padding-bottom: 1vh;
 						}
 					}
 				}
