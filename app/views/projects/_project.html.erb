@@ -8,7 +8,6 @@
   <%= link_to "Delete", project, method: :delete, data: { confirm: 'Are you sure?' }, class: "delete-link" %>
   <p class="project-description"><%= project.description %></p>
 
-
   <% if project.image? %>
     <%= image_tag project.image, class: "project-image" %>
   <% else %>
