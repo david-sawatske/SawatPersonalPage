@@ -9,8 +9,11 @@
     <%= f.text_field :description %>
   </div>
 
-  <div class="field">
-    Upload a image <%= f.file_field :image %>
+  <div class=".proj-img">
+    <%= f.label :image, 'Upload a image'%>
+    <%= f.file_field :image, class: 'image-upload' %>
+
+    <%= image_tag '', class: 'img-prev' %>
   </div>
 
   <div class="actions">
