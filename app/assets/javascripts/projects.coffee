@@ -9,6 +9,8 @@ $(document).ready ->
     reader.onload = (e) ->
       $('.img-prev').attr('src', e.target.result)
 
-    reader.readAsDataURL(input.files[0]);
+    reader.readAsDataURL(input.files[0])
+
+    $(".current-img").remove()
   return
 return
