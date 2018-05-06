@@ -1,5 +1,7 @@
 <div class="project-edit">
+  <%= link_to "Home", root_path, class: "home-link" %>
   <h1>Edit <%= @project.title %></h1>
 
-  <%= render 'form', project: @project %>
+  <%= render 'form', project: @project, type: 'edit' %>
+  <%= link_to "Delete", @project, method: :delete, data: { confirm: 'Are you sure?' }, class: "delete-link" %>
 </div>

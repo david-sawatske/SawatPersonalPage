@@ -1,11 +1,10 @@
 <div class='project'>
   <% if logged_in?(:site_admin) %>
-    <h3><%= link_to project.title, project_path(project) %></h3>
+    <h3><%= link_to project.title, edit_project_path(project) %></h3>
   <% else %>
   <h3><%= project.title %></h3>
   <% end %>
-  <%= link_to "Edit", edit_project_path(project), class: "edit-link" %>
-  <%= link_to "Delete", project, method: :delete, data: { confirm: 'Are you sure?' }, class: "delete-link" %>
+
   <p class="project-description"><%= project.description %></p>
 
   <% if project.image? %>
