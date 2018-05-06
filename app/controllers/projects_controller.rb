@@ -17,7 +17,7 @@ class ProjectsController < ApplicationController
     @projects = Project.new(project_params)
 
     if @projects.save
-      redirect_to projects_path, notice: 'Project created'
+      redirect_to root_path, notice: 'Project created'
     else
       flash.now[:errors] = @projects.errors.full_messages
       render :new
@@ -29,7 +29,7 @@ class ProjectsController < ApplicationController
 
   def update
     if @project.update(project_params)
-      redirect_to projects_path, notice: 'Project was successfully updated'
+      redirect_to root_path, notice: 'Project was successfully updated'
     else
       flash.now[:errors] = @project.errors.full_messages
       render :new
@@ -38,7 +38,7 @@ class ProjectsController < ApplicationController
 
   def show
     respond_to do |format|
-      format.html { project_path }
+      format.html { redirect_to root_path }
       format.js
     end
   end
@@ -46,7 +46,7 @@ class ProjectsController < ApplicationController
   def destroy
     @project.destroy
 
-    redirect_to projects_url, notice: 'Project removed'
+    redirect_to root_path, notice: 'Project removed'
   end
 
   private
