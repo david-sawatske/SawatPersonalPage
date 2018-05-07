@@ -3,6 +3,6 @@
   <%= f.text_field :name %>
 
   <%= f.label :icon %>
-  <%= f.text_field :icon %>
+  <%= f.file_field :icon, class: 'icon-upload', style: 'display:none;' %>
   <%= link_to_remove_association 'Remove Tech', f %>
 </div>
