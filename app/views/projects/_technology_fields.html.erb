@@ -4,5 +4,6 @@
 
   <%= f.label :icon %>
   <%= f.file_field :icon, class: 'icon-upload', style: 'display:none;' %>
+  <%= image_tag f.object.icon_url if f.object.icon?  %>
   <%= link_to_remove_association 'Remove Tech', f %>
 </div>
