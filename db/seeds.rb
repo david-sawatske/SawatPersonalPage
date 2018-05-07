@@ -34,11 +34,11 @@ proj_image = ['v1525177089/bc_dkfloc.gif', 'v1525052410/rt_v4zxte.gif']
                'v1522761437/rspec_akzu2f.png']
 
 for i in 0..1 do
-  Project.create!(title: projects[i], description: 'temp')
+  Project.create!(title: projects[i], description: 'temp', remote_image_url: base_url + proj_image[i])
 end
 
 for i in 0..10 do
-  Technology.create!(name: techs[i], icon: base_url + tech_icons[i])
+  Technology.create!(name: techs[i], remote_icon_url: base_url + tech_icons[i])
 end
 
 [4, 1, 2, 6, 9, 10].each do |tech_index|
