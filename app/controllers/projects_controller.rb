@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:edit, :update, :show, :destroy]
+  before_action :set_techs, only: [:edit, :update, :new, :create]
 
   access all: [],
          user: [],
@@ -54,7 +55,14 @@ class ProjectsController < ApplicationController
       @project = Project.find(params[:id])
     end
 
+    def set_techs
+      @technologies = Technology.all
+    end
+
     def project_params
-      params.require(:project).permit(:title, :description, :image)
+      params.require(:project).permit(:title,
+                                      :image,
+                                      :description,
+                                      technologies_attributes: [:name, :icon, :_destroy])
     end
 end

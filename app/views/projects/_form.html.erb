@@ -22,4 +22,18 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+
+  <div class="t">
+    <h2>Technologies Used</h2>
+
+    <div>
+      <%= f.fields_for :technologies do |tech_form| %>
+        <%= render 'technology_fields', f: tech_form %>
+      <% end %>
+
+      <div>
+        <%= link_to_add_association 'Add Technology', f, :technologies %>
+      </div>
+    </div>
+  </div>
 <% end %>
