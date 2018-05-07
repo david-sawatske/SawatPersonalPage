@@ -63,6 +63,6 @@ class ProjectsController < ApplicationController
       params.require(:project).permit(:title,
                                       :image,
                                       :description,
-                                      technologies_attributes: [:name, :icon, :_destroy])
+                                      technologies_attributes: [:id, :name, :icon, :_destroy])
     end
 end
