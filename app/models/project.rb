@@ -7,4 +7,8 @@ class Project < ApplicationRecord
   validates :title, :description, presence: true
 
   mount_uploader :image, ProjectUploader
+
+  def self.by_position
+    order("position ACS")
+  end
 end

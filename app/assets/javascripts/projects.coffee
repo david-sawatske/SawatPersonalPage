@@ -1,3 +1,11 @@
+ready = undefined
+
+ready = ->
+  $('.project-sort').sortable()
+  return
+
+$(document).ready ready
+
 $(document).ready ->
   $(".image-upload").change ->
     readURL(this);

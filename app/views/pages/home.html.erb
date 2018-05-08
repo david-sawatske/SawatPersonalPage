@@ -9,14 +9,15 @@
 
   </div>
 
-  <div class='project-container'>
-    <ul class="project-list">
-    <% @projects.each do |project| %>
-      <h1>
-        <%= link_to project.title, project_path(project), id: project.id, remote: true %>
-      </h1>
-    <% end %>
-    </ul>
+  <div class='project-container '>
+    <div class="project-list project-sort">
+      <% @projects.each do |project| %>
+          <h1>
+            <%= link_to project.title, project_path(project), id: project.id,
+                                                              remote: true %>
+          </h1>
+      <% end %>
+    </div>
 
     <div class="selected-project">
       <%= render @projects[0] if @projects[0] %>

@@ -7,7 +7,7 @@ class ProjectsController < ApplicationController
          site_admin: :all
 
   def index
-    @projects = Project.all
+    @projects = Project.by_position
   end
 
   def new
