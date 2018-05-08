@@ -30,7 +30,7 @@ ready = ->
 $(document).ready ready
 
 $(document).ready ->
-  $(".image-upload").change ->
+  $(".edit_project").on 'change', "input:file", () ->
     readURL(this);
 
   readURL = (input) ->
@@ -38,10 +38,13 @@ $(document).ready ->
       reader = new FileReader()
 
     reader.onload = (e) ->
-      $('.img-prev').attr('src', e.target.result)
+      if $(input).prop('class') == 'image-upload'
+        $('.img-prev').attr('src', e.target.result)
+        $(".current-img").remove()
+      else if $(input).prop('class') == 'icon-upload'
+        input_id = "#" + $(input).prop('id')
+        $(input_id).siblings('.current-icon').attr('src', e.target.result)
 
     reader.readAsDataURL(input.files[0])
-
-    $(".current-img").remove()
   return
 return
