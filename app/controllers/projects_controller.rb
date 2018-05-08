@@ -50,6 +50,14 @@ class ProjectsController < ApplicationController
     redirect_to root_path, notice: 'Project removed'
   end
 
+  def sort
+    params[:order].each do |key, value|
+      Project.find(value[:id]).update(position: value[:position])
+    end
+
+    head :ok
+  end
+
   private
     def set_project
       @project = Project.find(params[:id])

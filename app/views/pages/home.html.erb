@@ -9,10 +9,10 @@
 
   </div>
 
-  <div class='project-container '>
+  <div class='project-container'>
     <div class="project-list project-sort">
       <% @projects.each do |project| %>
-          <h1>
+          <h1 class="project-title" data-id="<%= project.id %>">
             <%= link_to project.title, project_path(project), id: project.id,
                                                               remote: true %>
           </h1>
