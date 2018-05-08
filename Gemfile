@@ -61,3 +61,5 @@ gem 'carrierwave-aws', '~> 1.3'
 gem 'dotenv-rails', '~> 2.4'
 gem 'cocoon', '~> 1.2', '>= 1.2.9'
 gem 'jquery-ui-rails', '~> 5.0', '>= 5.0.5'
+
+ruby '2.4.0'
