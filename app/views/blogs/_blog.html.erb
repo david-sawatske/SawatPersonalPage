@@ -1,7 +1,7 @@
 <div>
   <h2><%= blog.title %></h2>
 
-  <p><%= blog.body %></p>
+  <p><%= markdown blog.body %></p>
 
   <%= link_to 'delete', blog, method: :delete, data: { confirm: 'Are you sure?' } %>
 </div>
