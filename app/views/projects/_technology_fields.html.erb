@@ -2,14 +2,14 @@
   <%= f.label :name %>
   <%= f.text_field :name %>
 
-  <%= f.label :icon, class: 'icon-add' %>
-  <%= f.file_field :icon, class: 'icon-upload', style: 'display:none;' %>
+  <label class="icon-add">
+    <% if f.object.icon? %>
+      <%= image_tag f.object.icon_url, class: 'current-icon' %>
+    <% else %>
+      <%= image_tag 'add-img.png', class: 'current-icon' %>
+    <% end %>
+    <%= f.file_field :icon, class: 'icon-upload', style: 'display:none;' %>
+  </label>
 
-  <% if f.object.icon? %>
-    <%= image_tag f.object.icon_url, class: 'current-icon' %>
-  <% else %>
-    <%= image_tag '', class: 'current-icon' %>
-  <% end %>
-
-  <%= link_to_remove_association 'Remove Tech', f %>
+  <%= link_to_remove_association 'Remove', f %>
 </div>
