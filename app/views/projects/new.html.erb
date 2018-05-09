@@ -1,5 +1,6 @@
 <div class="project-create">
+  <%= link_to "Home", root_path, class: "home-link" %>
   <h1>Display New Project</h1>
 
-  <%= render 'form', project: @project, type: "Select" %>
+  <%= render 'form', project: @project, form_type: 'new', type: "Select" %>
 </div>

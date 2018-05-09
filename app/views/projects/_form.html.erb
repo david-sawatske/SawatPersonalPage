@@ -16,11 +16,14 @@
     </label>
 
     <%= image_tag '', class: 'img-prev' %>
-    <%= image_tag @project.image, class: 'current-img' if @project.image? %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
+    <% if @project.image? %>
+      <%= image_tag @project.image, class: 'current-img' %>
+    <% else %>
+      <label class="add-img-btn">
+        <%= image_tag 'add-img.png', class: 'current-img' %>
+        <%= f.file_field :image, class: 'image-upload', style: 'display:none;' %>
+      </label>
+    <% end %>
   </div>
 
   <div class="technologies">
@@ -30,7 +33,18 @@
       <%= render 'technology_fields', f: tech_form %>
     <% end %>
 
-    <%= link_to_add_association 'Add Technology', f, :technologies %>
+    <div class="add-tech">
+      <%= link_to_add_association 'Add Technology', f, :technologies %>
+    </div>
+  </div>
 
+  <div class="actions">
+    <%= f.submit %>
+
+    <% if form_type == 'new' %>
+      <%= link_to 'Cancel', root_path, data: { confirm: 'Edits will not be saved' }, class: "delete-link" %>
+    <% elsif form_type == 'edit'%>
+      <%= link_to "Delete", @project, method: :delete, data: { confirm: 'Are you sure?' }, class: "delete-link" %>
+    <% end %>
   </div>
 <% end %>
