@@ -30,7 +30,7 @@ ready = ->
 $(document).ready ready
 
 $(document).ready ->
-  $(".edit_project").on 'change', "input:file", () ->
+  $("div").on 'change', "input:file", () ->
     readURL(this);
 
   readURL = (input) ->
