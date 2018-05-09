@@ -88,6 +88,20 @@
 					h1 {
 						margin-bottom: 2vh;
 					}
+
+					.add-project {
+						grid-column: 1;
+						grid-row: 2;
+
+						padding-left: 1vw;
+
+						color: $mid-blue-t;
+						font-style: italic;
+					}
+
+					.add-project:hover {
+						color: $mid-blue;
+					}
 				}
 
 				.selected-project {
@@ -382,9 +396,4 @@
 			}
     }
 	}
-}
-
-.project-sort-container {
-	background-color: red;
-	margin: 2vh;
 }
