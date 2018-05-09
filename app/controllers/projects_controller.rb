@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:edit, :update, :show, :destroy]
-  before_action :set_techs, only: [:edit, :update, :new, :create]
+  before_action :set_techs, only: [:edit, :update]
 
   access all: [],
          user: [],
