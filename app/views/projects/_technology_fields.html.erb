@@ -2,7 +2,7 @@
   <%= f.label :name %>
   <%= f.text_field :name %>
 
-  <%= f.label :icon %>
+  <%= f.label :icon, class: 'icon-add' %>
   <%= f.file_field :icon, class: 'icon-upload', style: 'display:none;' %>
 
   <% if f.object.icon? %>
