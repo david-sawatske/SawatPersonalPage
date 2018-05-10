@@ -7,24 +7,28 @@
     </ul>
   <% end %>
 
-  <div>
+  <div class="title">
     <%= f.label :title %>
     <%= f.text_field :title %>
   </div>
 
-  <div>
+  <div class="body">
     <%= f.label :body %>
     <%= f.text_area :body, class: 'form-control', rows: 15 %>
   </div>
 
-  <div>
-    <%= f.label :project_id %>
+  <div class="project-selector">
+    <h2 class="faux-label">Assign Project Id</h2>
     <%= f.number_field :project_id %>
   </div>
 
-  <div>
-    <%= f.submit "Submit" %>
+  <div class="actions">
+    <%= f.submit %>
+
+    <% if form_type == 'new' %>
+      <%= link_to 'Cancel', root_path, data: { confirm: 'Edits will not be saved' }, class: "delete-link" %>
+    <% elsif form_type == 'edit'%>
+      <%= link_to "Delete", @blog, method: :delete, data: { confirm: 'Are you sure?' }, class: "delete-link" %>
+    <% end %>
   </div>
 <% end %>
-
-<%= link_to "All Blogs", blogs_path %>

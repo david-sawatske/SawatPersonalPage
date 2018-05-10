@@ -1,7 +1,7 @@
-<div>
-  <h2><%= blog.title %></h2>
-
-  <p><%= markdown blog.body %></p>
-
-  <%= link_to 'delete', blog, method: :delete, data: { confirm: 'Are you sure?' } %>
+<div class="body-container">
+  <h1><%= blog.title %></h1>
+  <%= markdown blog.body %>
 </div>
+
+<%= link_to 'edit', edit_blog_path %>
+<%= link_to 'delete', blog, method: :delete, data: { confirm: 'Are you sure?' } %>

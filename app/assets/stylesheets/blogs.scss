@@ -2,9 +2,142 @@
 
 @supports (grid-area: auto) {
 	@media screen and (min-width: 768px) {
-    .blog-index, .blog-form, .blog-show, .blog-edit {
+    .blog-create, .blog-show, .blog-edit, .project-create {
 			grid-column: 1;
 			grid-row: 2;
     }
+
+		.blog-edit, .blog-create {
+			width: 92.5vw;
+			justify-self: center;
+
+			background-color: $background-grey;
+			border: 1px solid $mid-blue-t;
+			border-bottom: none;
+
+			display: grid;
+			grid-template-columns: 46.5vw 46.5vw;
+			grid-template-rows: 2vh 10vh auto;
+			grid-row-gap: 2vh;
+
+			.blog-title {
+				grid-column: 1/3;
+				grid-row: 2;
+
+				width: 92.5vw;
+
+				background-color: $off-white;
+				border-top: 3px solid $mid-blue-t;
+				border-bottom: 3px solid $mid-blue-t;
+
+				h1 {
+					margin-left: 4vw;
+				}
+			}
+
+			a {
+				grid-column: 2;
+				grid-row: 2;
+
+				align-self: end;
+				justify-self: right;
+				padding: 0 3vw 2vh 0;
+			}
+
+			.edit_blog, .new_blog {
+				grid-column: 1/3;
+				grid-row: 3;
+
+				width: 92.5vw;
+				height: auto;
+				margin-left: -.5vw;
+
+				justify-self: center;
+				overflow-y: scroll;
+
+				background-color: $background-grey;
+				border: 1px solid $mid-blue-t;
+				border-top: none;
+
+				display: grid;
+				grid-template-columns: 11.25vw 70vw 11.25vw;
+				grid-template-rows: 15vh 75vh auto;
+				grid-row-gap: 2vh;
+
+				.title {
+					grid-column: 2;
+					grid-row: 1;
+
+					width: 45vw;
+					margin-left: 2vw;
+
+					display: grid;
+					grid-template-rows: 5vh 7.5vh;
+				}
+
+				.body {
+					grid-column: 2;
+					grid-row: 2;
+
+					margin-left: 2vw;
+
+					display: grid;
+					grid-template-rows: 5vh 7.5vh;
+
+					textarea {
+						height: 70vh;
+					  width: 70vw;
+					}
+				}
+
+				.project-selector {
+					grid-column: 2;
+					grid-row: 3;
+
+					input {
+						width: 7.5vw;
+						margin: 1vw;
+
+						font-size: 2vw
+					}
+				}
+
+				.actions {
+					grid-column: 2;
+					grid-row: 4;
+
+					margin: 3vh 0 0 2vw;
+				}
+			}
+		}
+
+		.blog-show  {
+			display: grid;
+			grid-template-columns: 10vw 68vw 20vw;
+			grid-template-rows: 10vh 80vh;
+			grid-row-gap: 2vh;
+
+			width: 90vw;
+			justify-self: center;
+			padding-top: 4vh;
+
+			background-color: $pic-background;
+
+			.body-container {
+				grid-row: 2;
+				grid-column: 2;
+
+				overflow-y: scroll;
+
+				h1 {
+					width: auto;
+					padding: 0 1.5vw;
+					justify-self: center;
+
+					border-top: 3px solid $mid-blue-t;
+					border-bottom: 3px solid $mid-blue-t;
+				}
+			}
+		}
   }
 }

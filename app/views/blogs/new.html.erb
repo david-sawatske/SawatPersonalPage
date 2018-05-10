@@ -1,7 +1,9 @@
-<div class="blog-form">
-  <h1>New Blog</h1>
+<div class="blog-create">
+  <div class="blog-title">
+    <h1>Create New Blog</h1>
+  </div>
 
-  <%= render 'form', blog: @blog %>
+  <%= link_to 'Return to Blogs Index', blogs_path %>
 
-  <%= link_to 'Back', blogs_path %>
+  <%= render 'form', blog: @blog, form_type: 'new', type: 'new' %>
 </div>

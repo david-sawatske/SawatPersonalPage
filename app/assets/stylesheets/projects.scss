@@ -61,28 +61,6 @@
 				grid-column-gap: 2.5vw;
 				grid-row-gap: 4vh;
 
-				label, h2 {
-					grid-row: 1;
-
-					font-size: calc(12px + 1vw);
-					font-style: italic;
-					text-decoration: underline;
-					color: $off-black;
-				}
-
-				h2 {
-					font-family: 'Raleway', serif;
-				}
-
-				input[type=text] {
-					font-size: calc(8px + 2vw);
-					color: $dark-grey;
-				}
-
-				textarea {
-					font-size: calc(8px + .75vw);
-				}
-
 				.title {
 					grid-column: 1;
 					grid-row: 1;
@@ -257,51 +235,6 @@
 
 					margin-left: 1vw;
 					margin-bottom: -3vh;
-
-					display: grid;
-					grid-template-columns: 15vw 15vw;
-					grid-template-rows: 5vh;
-					grid-column-gap: 2vw;
-
-					input, a {
-						width: 15vw;
-						justify-self: center;
-						align-self: center;
-
-						font-size: 1.75vw;
-						text-align: center;
-						padding: 1.5vh 0;
-						background-color: $off-white-t;
-						color: $off-black;
-
-						border-radius: 1vw;
-						cursor: pointer;
-					}
-
-					input {
-						grid-column: 1;
-						grid-row: 1;
-
-						border: 1px solid $mid-blue-t;
-
-					}
-
-					a {
-						grid-column: 2;
-						grid-row: 1;
-
-						border: 1px solid $red-t;
-					}
-
-					input:hover {
-						color: $dark-grey;
-						border: 1px solid $mid-blue;
-					}
-
-					a:hover {
-						color: $dark-grey;
-						border: 1px solid red;
-					}
 				}
 			}
     }

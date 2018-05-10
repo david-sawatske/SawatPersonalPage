@@ -1,8 +1,9 @@
 <div class="blog-edit">
-  <h1>Editing Blog</h1>
+  <div class="blog-title">
+    <h1>Edit <%= @blog.title %></h1>
+  </div>
 
-  <%= render 'form', blog: @blog %>
+  <%= link_to 'Return to Blogs Index', blogs_path %>
 
-  <%= link_to 'Show', @blog %> |
-  <%= link_to 'Back', blogs_path %>
+  <%= render 'form', blog: @blog, form_type: 'edit', type: 'edit' %>
 </div>
