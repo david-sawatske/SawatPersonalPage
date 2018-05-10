@@ -1,6 +1,7 @@
 <div class="project-edit">
-  <%= link_to "Home", root_path, class: "home-link" %>
-  <h1>Edit <%= @project.title %></h1>
+  <div class="project-title">
+    <h1>Edit <%= @project.title %></h1>
+  </div>
 
   <%= render 'form', project: @project, form_type: 'edit', type: 'edit' %>
 </div>

@@ -1,6 +1,7 @@
 <div class="project-create">
-  <%= link_to "Home", root_path, class: "home-link" %>
-  <h1>Display New Project</h1>
+  <div class="project-title">
+    <h1>Display New Project</h1>
+  </div>
 
   <%= render 'form', project: @project, form_type: 'new', type: "Select" %>
 </div>

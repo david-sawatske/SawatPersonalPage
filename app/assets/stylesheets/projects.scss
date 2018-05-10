@@ -4,33 +4,37 @@
 	@media screen and (min-width: 768px) {
     .project-index {
       grid-column: 1;
-      grid-row: 1;
+      grid-row: 2;
 
       overflow-y: scroll;
     }
 
     .project-edit, .project-create {
       grid-column: 1;
-      grid-row: 1;
+      grid-row: 2;
 
 			display: grid;
-			grid-template-columns: 50vw 50vw;
-			grid-template-rows: 2.5vh 10vh auto;
+			grid-template-columns: 48vw 48vw;
+			grid-template-rows: 10vh auto;
+			grid-row-gap: 2vh;
 
-			.home-link {
-				grid-column: 1;
+
+			.project-title {
+				grid-column: 1/3;
 				grid-row: 1;
-			}
-
-			h1 {
-				grid-column: 1;
-				grid-row: 2;
 				margin-left: 2vw;
+
+				border-top: 3px solid $mid-blue-t;
+				border-bottom: 3px solid $mid-blue-t;
+
+				h1 {
+					margin-left: 3vw;
+				}
 			}
 
 			.edit_project, .new_project {
 				grid-column: 1/3;
-				grid-row: 3/4;
+				grid-row: 2;
 				width: 90vw;
 				height: 80vh;
 

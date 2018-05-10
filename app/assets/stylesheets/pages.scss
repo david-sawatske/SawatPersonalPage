@@ -4,51 +4,21 @@
 	@media screen and (min-width: 768px) {
     .home-container {
 			grid-column: 1;
-			grid-row: 1;
+			grid-row: 2;
 
 			overflow: hidden;
 
       display: grid;
       grid-template-columns: 7.5vw 22.5vw 7.5vw 45vw 5vw 7.5vw;
-      grid-template-rows: 7.5vh 85.5vh;
-
-			.name {
-				grid-column: 2/4;
-				grid-row: 1;
-
-				justify-self: left;
-				align-self: center;
-
-				color: $off-black;
-			}
-
-			.links {
-				grid-column: 4/6;
-				grid-row: 1;
-
-				justify-self: right;
-				align-self: center;
-
-				.contact {
-					width: 20vw;
-
-					h2 {
-						display: none;
-					}
-
-					img {
-						width: 2vw;
-					}
-				}
-			}
+      grid-template-rows: 85.5vh;
 
 			.project-overlay {
 				grid-column: 2/4;
-				grid-row: 2;
+				grid-row: 1;
 
 				height: 85vh;
 				width: 75vw;
-				margin: 7.5vh 0 0 7.5vw;
+				margin-left: 7.5vw;
 
 				position: absolute;
 				overflow: hidden;
@@ -60,15 +30,14 @@
 
 			.project-container {
 				grid-column: 2/4;
-				grid-row: 2;
+				grid-row: 1;
 
 				height: 85vh;
 				width: 75vw;
-				margin: 7.5vh 0 0 7.5vw;
+				margin-left: 7.5vw;
 
 				position: absolute;
 				overflow: hidden;
-				margin-top: 7.5vh;
 
 				background-color: $background-grey;
 
@@ -231,7 +200,7 @@
 
 			.profile-container {
 				grid-column: 3/6;
-				grid-row: 2;
+				grid-row: 1;
 
 				height: 85vh;
 				width: 57.5vw;
@@ -354,6 +323,10 @@
 
 					display: grid;
 
+					ul {
+					 column-count: 5;
+					}
+
 					h2 {
 						grid-column: 2;
 						padding-top: 0;
@@ -370,7 +343,7 @@
 
 			.about-click {
 				grid-column: 5;
-				grid-row: 2/4;
+				grid-row: 1/3;
 				z-index: 2;
 
 				width: 5vw;
@@ -387,12 +360,6 @@
 				}
 
 				cursor: w-resize;
-			}
-
-			.contact {
-				ul {
-				 column-count: 5;
-				}
 			}
     }
 	}
