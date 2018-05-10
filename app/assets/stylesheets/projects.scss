@@ -13,33 +13,47 @@
       grid-column: 1;
       grid-row: 2;
 
-			display: grid;
-			grid-template-columns: 48vw 48vw;
-			grid-template-rows: 10vh auto;
-			grid-row-gap: 2vh;
+			width: 92.5vw;
+			justify-self: center;
 
+			background-color: $background-grey;
+			border: 1px solid $mid-blue-t;
+			border-bottom: none;
+
+			display: grid;
+			grid-template-columns: 46.5vw 46.5vw;
+			grid-template-rows: 2vh 10vh auto;
+			grid-row-gap: 2vh;
 
 			.project-title {
 				grid-column: 1/3;
-				grid-row: 1;
-				margin-left: 2vw;
+				grid-row: 2;
 
+				width: 92.5vw;
+
+				background-color: $off-white;
 				border-top: 3px solid $mid-blue-t;
 				border-bottom: 3px solid $mid-blue-t;
 
 				h1 {
-					margin-left: 3vw;
+					margin-left: 4vw;
 				}
 			}
 
 			.edit_project, .new_project {
 				grid-column: 1/3;
-				grid-row: 2;
-				width: 90vw;
-				height: 80vh;
+				grid-row: 3;
 
-				overflow: scroll;
+				width: 92.5vw;
+				height: 80vh;
+				margin-left: -.5vw;
+
 				justify-self: center;
+				overflow-y: scroll;
+
+				background-color: $background-grey;
+				border: 1px solid $mid-blue-t;
+				border-top: none;
 
 				display: grid;
 				grid-template-columns: 42.5vw 42.5vw;
@@ -73,6 +87,8 @@
 					grid-column: 1;
 					grid-row: 1;
 
+					margin-left: 2vw;
+
 					display: grid;
 					grid-template-rows: 5vh 7.5vh;
 
@@ -97,6 +113,8 @@
 					grid-column: 1;
 					grid-row: 2;
 
+					margin-left: 1vw;
+
 					display: grid;
 					grid-template-columns: 10vw 32.5vw;
 					grid-template-rows: 5vh 35vh;
@@ -110,11 +128,11 @@
 						align-self: center;
 						text-align: center;
 
-						background-color: $background-grey;
+						background-color: $pic-background;
+						border: 1px solid $mid-blue-t;
 						border-radius: 1vh 1vw;
   					cursor: pointer;
 						text-decoration: none;
-
 
 						h4 {
 							margin-top: 1vh;
@@ -154,6 +172,8 @@
 					grid-row: 3;
 
 					height: auto;
+					margin-left: 2vw;
+
 
 					display: grid;
 					grid-template-columns: repeat(4, 20vw);
@@ -235,6 +255,11 @@
 				.actions {
 					grid-row: 4;
 
+					margin-left: 1vw;
+					margin-bottom: -3vh;
+				}
+
+				.actions, .title-actions {
 					display: grid;
 					grid-template-columns: 15vw 15vw;
 					grid-template-rows: 5vh;
