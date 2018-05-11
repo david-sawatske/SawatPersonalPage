@@ -2,10 +2,14 @@
 
 @supports (grid-area: auto) {
 	@media screen and (min-width: 768px) {
-    .blog-create, .blog-show, .blog-edit, .project-create {
+    .blog-create, .blog-show, .blog-edit, .project-create, .blog-index {
 			grid-column: 1;
 			grid-row: 2;
     }
+
+		.blog-index {
+			overflow-y: scroll;
+		}
 
 		.blog-edit, .blog-create {
 			width: 92.5vw;
@@ -129,6 +133,15 @@
 				grid-row: 1;
 
 				justify-self: center;
+
+				h3 {
+					text-align: center;
+					border-bottom: 1px solid $mid-blue-t;
+				}
+
+				li {
+					margin: 1vw;
+				}
 			}
 
 			.blog-partial {

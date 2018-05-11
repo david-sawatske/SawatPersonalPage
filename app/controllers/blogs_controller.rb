@@ -21,6 +21,7 @@ class BlogsController < ApplicationController
   end
 
   def show
+    @blogs = Blog.all
   end
 
   def edit

@@ -2,13 +2,15 @@
   <%= render @blog %>
 
   <div class="other-blogs">
-    <h4>Other Blogs (temp)</h4>
+    <h3>Other Posts</h3>
     <ul>
-      <li>blog 2</li>
-      <li>blog 3</li>
-      <li>blog 4</li>
-      <li>blog 5</li>
-      <li>blog 6</li>
+      <% @blogs.each do |blog| %>
+       <% if blog == @blog %>
+         <li><%= @blog.title %></li>
+        <% else %>
+          <li><%= link_to blog.title, blog %></li>
+       <% end %>
+      <% end %>
     </ul>
   </div>
 </div>
