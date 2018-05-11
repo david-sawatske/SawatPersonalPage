@@ -12,7 +12,7 @@
 
   <body>
     <div class="info-head">
-      <h2 class="name">David Sawatske</h2>
+      <h2 class="name"><%= link_to "David Sawatske", root_path %></h2>
 
       <div class='links'>
         <%= render "pages/contact" %>
@@ -26,7 +26,6 @@
       <% if current_user %>
         <%= link_to "Logout", destroy_user_session_path, method: :delete %>
       <% else %>
-        <!-- <%= link_to "Register", new_user_registration_path %> -->
         <%= link_to "Admin Sign In", new_user_session_path %>
       <% end %>
     </div>
