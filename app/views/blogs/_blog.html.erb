@@ -1,7 +1,19 @@
-<div class="body-container">
-  <h1><%= blog.title %></h1>
-  <%= markdown blog.body %>
+<div class="blog-partial">
+  <div class="header-container">
+    <h2><%= blog.title %></h2>
+    <h4> <%= blog.updated_at.strftime("%B %d, %Y") %> </h4>
+  </div>
+
+
+  <div class="markdown-container">
+    <%= markdown blog.body %>
+  </div>
 </div>
 
-<%= link_to 'edit', edit_blog_path %>
-<%= link_to 'delete', blog, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% if logged_in?(:site_admin) %>
+  <div class="blog-admin-links">
+    <%= link_to 'edit', edit_blog_path %>
+    <br>
+    <%= link_to 'delete', blog, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
+<% end %>
