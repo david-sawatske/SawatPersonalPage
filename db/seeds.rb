@@ -53,7 +53,7 @@ Project.first.update!(description: "A web app for competing against your friends
                       git_url: "https://github.com/david-sawatske/BlueChip",
                       live_url: "http://www.blue-chip.sawatske.com")
 
-Project.find(2).update!(description: "This web app provides a quick way to create a YouTube playlist.",
+Project.find(2).update!(description: "This web app provides a quick way to create a YouTube playlist. Search for videos and edit playlist without interrupting video playback.",
                         git_url: "https://github.com/david-sawatske/ReduxTube",
                         live_url: "http://www.redux-tube.sawatske.com")
-User.create!(email: 'tester@ex.com', password: 'password', name: 'One Tester', roles: 'site_admin')
+User.create!(email: 'david@sawatske.com', password: 'password', name: 'David Sawatske', roles: 'site_admin')
