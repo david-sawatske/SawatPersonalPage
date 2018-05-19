@@ -1,0 +1,30 @@
+@import '_variables';
+
+.highlight {
+  margin: 1.5vw;
+  padding: 2vh;
+
+  background-color: $mid-blue-xt;
+  border: 1px solid $off-black-t;
+  border-radius: 1vw;
+
+  * { color: black }
+
+  .k { color:  $blue-grey } /* Keyword */
+
+  .c1 { color: $light-green } /* Comment.Single */
+
+  .p { color: black } /* Keyword.Constant */
+
+  .kc { color: $purple } /* Keyword.Constant */
+  .kd { color: $purple } /* Keyword.Declaration */
+  .kr { color: $purple } /* Keyword.Declaration */
+
+  .nb { color: $mid-green} /* Name.Builtin */
+
+  .nx, .sr, .err { color: $mid-blue} /* Name.Class */
+
+  .s { color: $purple-gray } /* Literal.String */
+  .s1 { color: $purple-gray } /* Literal.String.Single */
+  .s2 { color: $purple-gray } /* Literal.String.Double */
+}

@@ -1,3 +1,11 @@
+<script type="text/javascript">
+  // $(document).ready(function() {
+  //   var el = $(".err")
+  //   el.removeClass("err");
+  //   el.addClass("nx")
+  // })
+</script>
+
 <div class="blog-partial">
   <div class="header-container">
     <h2><%= blog.title %></h2>
@@ -6,7 +14,7 @@
 
 
   <div class="markdown-container">
-    <%= markdown blog.body %>
+    <%= markdown(@blog.body) %>
   </div>
 </div>
 
