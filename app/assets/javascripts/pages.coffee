@@ -17,5 +17,6 @@ $(document).ready ->
     $('.project-overlay').css 'z-index': '1'
     $('.profile-container').fadeIn()
     $('.about-click').fadeOut()
+    ga('send', 'event', 'About Click', 'viewed profile')
     return
   return
