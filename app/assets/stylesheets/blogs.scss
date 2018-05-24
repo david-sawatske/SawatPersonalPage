@@ -200,6 +200,30 @@
 
 					width: 55vw;
 					justify-self: center;
+
+					code {
+						background-color: $mid-blue-xt;
+						border: .5px dashed $off-black-t;
+						padding: 0 .25vw;
+						border-radius: .1vw;
+					}
+
+					h1, h2, h3, h4, h5 {
+						padding: 1vh;
+					}
+
+					h3 {
+						font-size: calc(12px + .5vw);
+					}
+
+					h4 {
+						font-size: calc(12px + .25vw);
+					}
+
+					li {
+						font-size: calc(8px + .5vw);
+					}
+
 				}
 			}
 
